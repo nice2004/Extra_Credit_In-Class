@@ -16,8 +16,9 @@ app = Dash(__name__, external_stylesheets=stylesheets)
 
 # Callbacks ***************************************************************************
 fig = px.bar(df, x='Companies',
-             y='Earnings_Growth', color='Companies', title=f'Magnificent Graph about Valuation, Growth and Margins',
+             y='Earnings_Growth', title=f'Magnificent Graph about Valuation, Growth and Margins',
              labels={'Companies': "Companies", 'Earnings_Growth': 'Earnings Growth(%)'})
+fig.update_traces(marker_color='green')
 fig.update_layout(
     title={
         'text': f'Magnificent Graph about Valuation, Growth and Margins',
